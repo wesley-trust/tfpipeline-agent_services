@@ -89,3 +89,9 @@ variable "resource_network_peer_deployment" {
   type        = string
   default     = "01"
 }
+
+variable "provision_scale_set" {
+  description = "Whether to provision a key vault"
+  type        = bool
+  default     = true
+}
