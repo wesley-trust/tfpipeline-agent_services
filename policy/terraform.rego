@@ -18,6 +18,9 @@ weights := {
 	"azurerm_availability_set": {"delete": 100, "create": 5, "modify": 1},
 	"azurerm_linux_virtual_machine": {"delete": 100, "create": 10, "modify": 1},
 	"azurerm_windows_virtual_machine": {"delete": 100, "create": 10, "modify": 1},
+	## Virtual Machine Scale Set
+	"azurerm_linux_virtual_machine_scale_set": {"delete": 100, "create": 10, "modify": 1},
+	"azurerm_windows_virtual_machine_scale_set": {"delete": 100, "create": 10, "modify": 1},
 	## Shutdown
 	"azurerm_dev_test_global_vm_shutdown_schedule": {"delete": 100, "create": 5, "modify": 1},
 	## Disks
