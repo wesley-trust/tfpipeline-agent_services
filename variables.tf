@@ -46,7 +46,7 @@ variable "resource_instance_count" {
       "AgentServices" = 0
     },
     default = {
-      "AgentServices" = 2
+      "AgentServices" = 0
     },
   }
 }
@@ -56,10 +56,10 @@ variable "resource_instance_size" {
   type        = map(any)
   default = {
     Prod = {
-      "AgentServices" = "Standard_B1s"
+      "AgentServices" = "Standard_D2as_v4"
     },
     default = {
-      "AgentServices" = "Standard_B1s"
+      "AgentServices" = "Standard_D2as_v4"
     }
   }
 }
