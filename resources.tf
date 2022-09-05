@@ -13,4 +13,5 @@ module "agent_services" {
   resource_network_role     = var.resource_network_role
   operating_system_platform = var.operating_system_platform
   provision_scale_set       = var.provision_scale_set
+  resource_vm_sku           = var.resource_vm_sku
 }

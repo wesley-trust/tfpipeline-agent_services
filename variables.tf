@@ -95,3 +95,9 @@ variable "provision_scale_set" {
   type        = bool
   default     = true
 }
+
+variable "resource_vm_sku" {
+  description = "Desired size for the provisioned resources"
+  type        = string
+  default     = "18.04-LTS"
+}
