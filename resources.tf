@@ -1,7 +1,7 @@
 # Define resources
 module "agent_services" {
   for_each                  = toset(local.resource_locations)
-  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.5-compute"
+  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.6-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
   service_name              = var.service_name
