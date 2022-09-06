@@ -1,7 +1,7 @@
 # Define resources
 module "agent_services" {
   for_each                  = toset(local.resource_locations)
-  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.4-compute"
+  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.5-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
   service_name              = var.service_name
@@ -14,4 +14,5 @@ module "agent_services" {
   operating_system_platform = var.operating_system_platform
   provision_scale_set       = var.provision_scale_set
   resource_vm_sku           = var.resource_vm_sku
+  ephemeral_disk_enabled    = var.ephemeral_disk_enabled
 }

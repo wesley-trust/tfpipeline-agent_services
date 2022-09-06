@@ -101,3 +101,9 @@ variable "resource_vm_sku" {
   type        = string
   default     = "18.04-LTS"
 }
+
+variable "ephemeral_disk_enabled" {
+  description = "Whether to use a ephemeral OS disk the provisioned resources"
+  type        = bool
+  default     = true
+}
