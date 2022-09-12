@@ -56,10 +56,10 @@ variable "resource_instance_size" {
   type        = map(any)
   default = {
     Prod = {
-      "AgentServices" = "Standard_D2as_v4"
+      "AgentServices" = "Standard_D4as_v4"
     },
     default = {
-      "AgentServices" = "Standard_D2as_v4"
+      "AgentServices" = "Standard_D4as_v4"
     }
   }
 }
@@ -97,7 +97,7 @@ variable "provision_scale_set" {
 }
 
 variable "resource_vm_sku" {
-  description = "Desired size for the provisioned resources"
+  description = "Desired sku for the provisioned resources"
   type        = string
   default     = "18.04-LTS"
 }
@@ -106,4 +106,16 @@ variable "ephemeral_disk_enabled" {
   description = "Whether to use a ephemeral OS disk the provisioned resources"
   type        = bool
   default     = true
+}
+
+variable "resource_image_linux" {
+  description = "Desired image for the provisioned resources"
+  type        = string
+  default     = "Image-Linux"
+}
+
+variable "resource_image_linux_group" {
+  description = "Resource group name of image for the provisioned resources"
+  type        = string
+  default     = "pkrrunngerimagebuild1172526797"
 }
