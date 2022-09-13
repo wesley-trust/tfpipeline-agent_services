@@ -16,4 +16,5 @@ module "agent_services_linux" {
   ephemeral_disk_enabled    = var.ephemeral_disk_enabled
   resource_image            = var.resource_image_linux
   resource_image_group      = var.resource_image_linux_group
+  resource_disk_size        = var.resource_disk_size
 }

@@ -119,3 +119,9 @@ variable "resource_image_linux_group" {
   type        = string
   default     = "pkrrunngerimagebuild1172526797"
 }
+
+variable "resource_disk_size" {
+  description = "Desired disk size for the provisioned resources"
+  type        = string
+  default     = "86"
+}
