@@ -26,7 +26,7 @@ variable "service_deployment" {
 
 variable "resource_name" {
   description = "Desired name for the provisioned resources"
-  type        = map(string)
+  type        = map(any)
   default = {
     AgentServices = {
       Linux   = "DEVOPS-Linux",
@@ -101,7 +101,7 @@ variable "ephemeral_disk_enabled" {
 
 variable "resource_image" {
   description = "Desired image for the provisioned resources"
-  type        = string
+  type        = map(any)
   default = {
     Linux   = "Image-Linux",
     Windows = "Image-Windows",
@@ -110,7 +110,7 @@ variable "resource_image" {
 
 variable "resource_image_linux_group" {
   description = "Resource group name of image for the provisioned resources"
-  type        = string
+  type        = map(any)
   default = {
     Linux   = "Image-Linux-agent_services-Prod-UKS-01-rg",
     Windows = "",
@@ -119,7 +119,7 @@ variable "resource_image_linux_group" {
 
 variable "resource_disk_size" {
   description = "Desired disk size for the provisioned resources"
-  type        = string
+  type        = map(any)
   default = {
     Linux   = "86",
     Windows = "86",
