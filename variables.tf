@@ -112,8 +112,8 @@ variable "resource_image_group" {
   description = "Resource group name of image for the provisioned resources"
   type        = map(any)
   default = {
-    Linux   = "Image-Linux-agent_services-Prod-UKS-01-rg",
-    Windows = "Image-Windows-agent_services-Prod-UKS-01-rg",
+    Linux   = "Image-Lin-agent_services-Prod-UKS-01-rg",
+    Windows = "Image-Win-agent_services-Prod-UKS-01-rg",
   }
 }
 
