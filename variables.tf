@@ -28,14 +28,11 @@ variable "resource_name" {
   description = "Desired name for the provisioned resources"
   type        = map(string)
   default = {
-    "AgentServices" = "DEVOPS"
+    AgentServices = {
+      Linux   = "DEVOPS-Linux",
+      Windows = "DEVOPS-Windows"
+    }
   }
-}
-
-variable "operating_system_platform" {
-  description = "Desired OS for the provisioned resources"
-  type        = string
-  default     = "Linux"
 }
 
 variable "resource_instance_count" {
@@ -96,32 +93,35 @@ variable "provision_scale_set" {
   default     = true
 }
 
-variable "resource_vm_sku" {
-  description = "Desired sku for the provisioned resources"
-  type        = string
-  default     = "18.04-LTS"
-}
-
 variable "ephemeral_disk_enabled" {
   description = "Whether to use a ephemeral OS disk the provisioned resources"
   type        = bool
   default     = true
 }
 
-variable "resource_image_linux" {
+variable "resource_image" {
   description = "Desired image for the provisioned resources"
   type        = string
-  default     = "Image-Linux"
+  default = {
+    Linux   = "Image-Linux",
+    Windows = "Image-Windows",
+  }
 }
 
 variable "resource_image_linux_group" {
   description = "Resource group name of image for the provisioned resources"
   type        = string
-  default     = "pkrrunngerimagebuild1172526797"
+  default = {
+    Linux   = "Image-Linux-agent_services-Prod-UKS-01-rg",
+    Windows = "",
+  }
 }
 
 variable "resource_disk_size" {
   description = "Desired disk size for the provisioned resources"
   type        = string
-  default     = "86"
+  default = {
+    Linux   = "86",
+    Windows = "86",
+  }
 }
