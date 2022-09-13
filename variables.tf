@@ -108,7 +108,7 @@ variable "resource_image" {
   }
 }
 
-variable "resource_image_linux_group" {
+variable "resource_image_group" {
   description = "Resource group name of image for the provisioned resources"
   type        = map(any)
   default = {
