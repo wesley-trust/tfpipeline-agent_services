@@ -29,8 +29,8 @@ variable "resource_name" {
   type        = map(any)
   default = {
     AgentServices = {
-      Linux   = "DEVOPS-Linux",
-      Windows = "DEVOPS-Windows"
+      Linux   = "DEVOPS-LINUX",
+      Windows = "DEVOPS-WINDOWS"
     }
   }
 }
@@ -113,7 +113,7 @@ variable "resource_image_group" {
   type        = map(any)
   default = {
     Linux   = "Image-Linux-agent_services-Prod-UKS-01-rg",
-    Windows = "",
+    Windows = "Image-Windows-agent_services-Prod-UKS-01-rg",
   }
 }
 
@@ -122,6 +122,6 @@ variable "resource_disk_size" {
   type        = map(any)
   default = {
     Linux   = "86",
-    Windows = "86",
+    Windows = "256",
   }
 }
