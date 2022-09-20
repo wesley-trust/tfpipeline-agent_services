@@ -29,8 +29,8 @@ variable "resource_name" {
   type        = map(any)
   default = {
     AgentServices = {
-      Linux   = "AS-LIN",
-      Windows = "AS-WIN"
+      Linux   = "LIN",
+      Windows = "WIN"
     }
   }
 }
