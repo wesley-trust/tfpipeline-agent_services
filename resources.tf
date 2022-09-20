@@ -4,7 +4,7 @@ module "agent_services_linux" {
   source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.7-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
-  service_name              = var.service_name
+  service_name              = "${var.service_name}-Lin"
   service_location          = each.value
   resource_name             = lookup(local.resource_name, "Linux", null)
   operating_system_platform = "Linux"
@@ -24,7 +24,7 @@ module "agent_services_windows" {
   source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.7-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
-  service_name              = var.service_name
+  service_name              = "${var.service_name}-Win"
   service_location          = each.value
   resource_name             = lookup(local.resource_name, "Windows", null)
   operating_system_platform = "Windows"
