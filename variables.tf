@@ -29,8 +29,8 @@ variable "resource_name" {
   type        = map(any)
   default = {
     AgentServices = {
-      Linux   = "DEVOPS-LINUX",
-      Windows = "DEVOPS-WINDOWS"
+      Linux   = "AS-LIN",
+      Windows = "AS-WIN"
     }
   }
 }
