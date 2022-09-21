@@ -26,5 +26,14 @@ schedules:
     - main
   always: true
 
+# Trigger for agent build dependency
+resources:
+  pipelines:
+  - pipeline: 'Agent Build'  
+    source: ENV-P;REF-latest; pkr-agent_services
+    trigger:    
+      stages:
+      - Build
+
 extends:
   template: ./Shared/azure-pipelines.yml
