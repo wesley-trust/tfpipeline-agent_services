@@ -1,7 +1,7 @@
 # Define resources
 module "agent_services_linux" {
   for_each                  = toset(local.resource_locations)
-  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.8-compute"
+  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.9-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
   service_name              = "${var.service_name}-Lin"
@@ -21,7 +21,7 @@ module "agent_services_linux" {
 
 module "agent_services_windows" {
   for_each                  = toset(local.resource_locations)
-  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.8-compute"
+  source                    = "github.com/wesley-trust/tfmodule-compute?ref=v1.9-compute"
   service_environment       = terraform.workspace
   service_deployment        = var.service_deployment
   service_name              = "${var.service_name}-Win"
