@@ -8,3 +8,7 @@ stages:
 
   # Apply Jobs
   - template: ../Jobs/auto_apply.yml
+
+  # Cleanup Job
+  - template: ../Jobs/cleanup_linux.yml
+  - template: ../Jobs/cleanup_windows.yml

@@ -1,0 +1,15 @@
+jobs:
+- job: Cleanup_Windows
+  displayName: 'Cleanup Windows build'
+  continueOnError: true
+  steps:
+
+  # Checkout shared steps
+  - checkout: 'tfpipeline-shared'
+    displayName: 'Checkout shared Pipeline steps'
+    path: 's/pipeline/Shared/'
+
+  # Cleanup agent image
+  - template: ./Steps/runnerimages/cleanup.yml@tfpipeline-shared
+    parameters:
+      imageResourceGroupName: $(ImageResourceGroupName_Windows)
