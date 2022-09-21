@@ -73,6 +73,8 @@ resource_types := {
 	"azurerm_availability_set",
 	"azurerm_linux_virtual_machine",
 	"azurerm_windows_virtual_machine",
+	"azurerm_linux_virtual_machine_scale_set",
+	"azurerm_windows_virtual_machine_scale_set",
 	"azurerm_dev_test_global_vm_shutdown_schedule",
 	"azurerm_managed_disk",
 	"azurerm_virtual_machine_data_disk_attachment",
